@@ -1,4 +1,4 @@
-# OpalLibraryHelper
+# OpalLibraryHelper [![Build Status](https://travis-ci.org/ProjectOpal/LibraryHelper.svg?branch=master)](https://travis-ci.org/ProjectOpal/LibraryHelper)
 
 Contains the interface for an Opal Module
 
