@@ -6,28 +6,28 @@
 // This will load the definition for common Particle variable types
 #include "Particle.h"
 
-// This is your main class that users will import into their application
-class OpalLibraryHelper
-{
-public:
-  /**
-   * Constructor
-   */
-  OpalLibraryHelper();
+namespace core {
+  // This is your main class that users will import into their application
+  class OpalModule : public Timer
+  {
+  public:
+    /**
+     * Constructor
+     */
+    OpalModule(int period, bool one_shot) :
+                      Timer(period, nullptr, one_shot) {
+    };
 
-  /**
-   * Example method
-   */
-  void begin();
+    void Start() {
+      this->start();
+    };
 
-  /**
-   * Example method
-   */
-  void process();
+    virtual void Run() = 0;
 
-private:
-  /**
-   * Example private method
-   */
-  void doit();
-};
+  private:
+    void timeout() {
+      this->Run();
+    };
+    // Timer timer;
+  };
+} // namespace core

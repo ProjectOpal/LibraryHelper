@@ -6,7 +6,7 @@ install:
   - npm install -g particle-cli
 
 script:
-  - ./particle-cli-login.sh $email $pass
+  - ./build/particle-cli-login.sh $email $pass
   - particle compile photon firmware/
 
 after_success:
