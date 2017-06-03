@@ -1,10 +1,14 @@
 sudo: required
 
+node_js:
+  - "4.0.0"
+
 install:
   - sudo apt-get update
   - sudo apt-get install expect
   - npm install -g particle-cli
 
 script:
-  - sh particle-cli-login.sh $email $pass
+  -
+  - ./particle-cli-login.sh $email $pass
   # - particle compile photon
