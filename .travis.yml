@@ -7,7 +7,7 @@ install:
 
 script:
   - ./build/particle-cli-login.sh $email $pass
-  - particle compile photon firmware/
+  - particle compile photon
 
 after_success:
   - curl -X POST https://maker.ifttt.com/trigger/pushbullet/with/key/$ifttt
