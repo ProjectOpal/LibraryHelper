@@ -10,6 +10,6 @@ install:
   - npm install -g particle-cli
 
 script:
-  - chmod +x particle-cli-login
+  - chmod +x particle-cli-login.sh
   - ./particle-cli-login.sh $email $pass
   # - particle compile photon
