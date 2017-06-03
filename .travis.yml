@@ -1,7 +1,8 @@
+dist: trusty
 sudo: required
-
+language: node_js
 node_js:
-  - "4.0.0"
+  - '4'
 
 install:
   - sudo apt-get update
